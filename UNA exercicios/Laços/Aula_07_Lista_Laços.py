@@ -19,3 +19,5 @@ print("07 - Dobro de 5 Valores\n")
 print("08 - Dobro de 5 Valores\n")
 print("09 - Dobro de 5 Valores\n")
 print("10 - Dobro de 5 Valores\n")
+
+input("\nAperte qualquer coisa para fechar...")
