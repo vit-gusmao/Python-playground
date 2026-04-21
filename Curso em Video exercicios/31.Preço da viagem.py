@@ -4,7 +4,7 @@ print("O preço da passagem para viagens de até 200Km é R$0,50 por Km e mais d
 dist = float(input("Qual a distância da viagem em Km: "))
 price50 = dist * 0.50
 price45 = dist * 0.45
-if dist > 200:
+if dist > 200.00:
     print(f"o preço da viagem será de R${price45:.2f}")
 else:
     print(f"o preço da viagem será de R${price50:.2f}")

@@ -20,6 +20,8 @@ elif ifelse == 2:
 else:
     print("você escolheu 3")
 
+#########################################################################
+
 print('\n"or" Apenas uma condição precisa ser verdadeira.')
 x = int(input("Digite 1 ou 2: "))
 while x not in (1, 2):
@@ -28,6 +30,8 @@ while x not in (1, 2):
 
 if x == 1 or x == 2:
     print("Você digitou 1 ou 2")
+
+##########################################################################
 
 print('\n"and" Duas condições precisam ser verdadeiras.')
 y = int(input("\nDigite um número entre 1 e 10: "))
@@ -47,6 +51,8 @@ while z != 5:
 if not(z != 5):
     print("Correto, você digitou 5")
 
+#######################################################################
+
 print('\n"in"  Verifica se um valor está dentro de um conjunto/lista.')
 n = int(input("Escolha 1, 2 ou 3: "))
 while n not in (1, 2, 3):
@@ -55,6 +61,8 @@ while n not in (1, 2, 3):
 
 if n in (1, 2, 3):
     print(f"Você escolheu {n}")
+
+########################################################################
 
 print('"not in" Verifica se NÃO está no conjunto/lista..')
 n2 = int(input("Digite um número diferente de 1, 2 ou 3: "))
