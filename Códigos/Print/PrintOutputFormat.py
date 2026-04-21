@@ -30,5 +30,17 @@ print(f'''Usando aspas simples fora: '{texto}'
 Usando aspas duplas fora: "{texto}"''')
 
 input("\nAperte qualquer coisa para fechar...")
+##############################################################################
 
+print("\nFormatação de números com zeros à esquerda")
 
+print('":0x" são usados para formatar números com zeros à esquerda, sendo x a quantidade de espaços a esquerda.\n')
+n1 = int(input("Digite um número: "))
+n2 = int(input("Digite os digitos do número: "))
+while n2 < 0:
+    print("Números negativos e decimais são inválidos, digite apenas inteiros positivos.")
+    n2 = int(input("Digite os digitos do número: "))
+
+print(f"Número com {n2} dígitos: {n1:0{n2}}")
+
+##############################################################################

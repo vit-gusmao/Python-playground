@@ -95,3 +95,30 @@ resultado_is_not2 = (a is not c)
 print(f"""Resultado:
 a e b NÃO são o mesmo objeto? {resultado_is_not1}
 a e c NÃO são o mesmo objeto? {resultado_is_not2}\n""")
+
+###################################################################################
+print("Operador BREAK")
+
+print('"break" → interrompe o loop imediatamente.\n')
+
+print("Exemplo com while:")
+
+while True:
+    n = int(input("Digite 0 para sair: "))
+
+    if n == 0:
+        print("Loop interrompido com break.\n")
+        break
+    else:
+        print(f"Você digitou {n}, o loop continua.\n")
+
+print("Exemplo com for:")
+
+for i in range(1, 11):
+    print(f"Contador: {i}")
+
+    if i == 5:
+        print("Loop interrompido no número 5 com break.\n")
+        break
+
+input("Aperte qualquer coisa para fechar...")

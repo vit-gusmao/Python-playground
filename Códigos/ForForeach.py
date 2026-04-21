@@ -1,1 +1,0 @@
-input("\nAperte qualquer coisa para fechar...")

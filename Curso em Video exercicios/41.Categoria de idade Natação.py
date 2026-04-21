@@ -18,3 +18,5 @@ elif idd <= 20:
     print(f"Categoria do atleta {nome}: SÊNIOR")
 else:
     print(f"Categoria do atleta {nome}: MASTER")
+
+input("\nAperte qualquer coisa para fechar...")

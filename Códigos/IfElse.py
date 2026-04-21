@@ -21,6 +21,22 @@ else:
     print("você escolheu 3")
 
 #########################################################################
+print('"if aninhado" verifica uma condição principal e, só se ela for verdadeira, verificar outra condição mais específica dentro dela.\n')
+
+idade = int(input("Digite sua idade: "))
+
+if idade >= 18:
+    print("Você é maior de idade")
+
+    if idade >= 60:
+        print("E também é idoso")
+    else:
+        print("E não é idoso")
+
+else:
+    print("Você é menor de idade")
+
+########################################################################
 
 print('\n"or" Apenas uma condição precisa ser verdadeira.')
 x = int(input("Digite 1 ou 2: "))
