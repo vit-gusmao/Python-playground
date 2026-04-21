@@ -65,3 +65,33 @@ print(f"""Resultado:
 O número {n} NÃO está na lista? {resultado_not_in}\n""")
 
 input("Aperte qualquer coisa para fechar...")
+###################################################################################
+print("Operador IS")
+
+print('"is" → verifica se duas variáveis são o MESMO objeto na memória.\n')
+
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+resultado_is1 = (a is b)
+resultado_is2 = (a is c)
+
+print(f"""Resultado:
+a e b são o mesmo objeto? {resultado_is1}
+a e c são o mesmo objeto? {resultado_is2}\n""")
+###################################################################################
+print("Operador IS NOT")
+
+print('"is not" → verifica se duas variáveis NÃO são o mesmo objeto.\n')
+
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+resultado_is_not1 = (a is not b)
+resultado_is_not2 = (a is not c)
+
+print(f"""Resultado:
+a e b NÃO são o mesmo objeto? {resultado_is_not1}
+a e c NÃO são o mesmo objeto? {resultado_is_not2}\n""")

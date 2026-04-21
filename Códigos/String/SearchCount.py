@@ -29,4 +29,14 @@ algo = input("Digite algo: ")
 busca = input("Digite o que deseja procurar: ")
 print(f' Existe "{busca}" em "{algo}"? {busca in algo}\n')
 
+print("\n'startswith()' verifica como a string começa\n")
+algo = input("Digite algo: ")
+inicio = input("Começa com: ")
+print(f"{algo} começa com '{inicio}': {algo.startswith(inicio)}")
+
+print("\n'endswith()' verifica como a string termina\n")
+algo = input("Digite algo: ")
+final = input("Termina com: ")
+print(f"{algo} termina com '{final}': {algo.endswith(final)}")
+
 input("\nAperte qualquer coisa para fechar...")
