@@ -3,14 +3,14 @@
 print('"def" cria uma função que pode ser usada várias vezes.\n')
 
 def saudacao():
-    print("Olá! Essa é uma função simples.\n")
+    print("Saudações.\n")
 
 # chamando a função
 saudacao()
 
 #############################################################################
 
-print('Função com parâmetros (entrada de dados).\n')
+print('Função com variáveis.\n')
 
 def mostrar_nome(nome):
     print(f"Seu nome é: {nome}\n")

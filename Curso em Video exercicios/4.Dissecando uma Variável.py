@@ -1,11 +1,38 @@
-print("Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possiveis sobre ele.\n")
+print("Faça um programa que leia algo pelo teclado e mostre informações sobre ele.\n")
+
 algo = input("Digite algo: ")
-print(f"""\n{algo} é da classe:{type(algo)}
-{algo} é númerico:{algo.isnumeric()}
-{algo} é alfabético:{algo.isalpha()}
-{algo} é alfanumérico:{algo.isalnum()}
-{algo} há somente letras maiusculas:{algo.isupper()}
-{algo} há somente letras maiusculas:{algo.islower()}
-{algo} as Primeiras letra de cada palavra é maiúscula e o resto das letras são minúsculas:{algo.istitle()}""")
+
+tipos = [
+
+    ("string", str),
+    ("inteiro", int),
+    ("float", float),
+    ("booleano", bool)
+]
+
+for nome, tipo in tipos:
+    if type(algo) == tipo:
+        print(f"É uma {nome}")
+    else:
+        print(f"Não é uma {nome}")
+
+print()  # linha em branco
+
+# Métodos de string
+verificacoes = [
+    ("É numérico", algo.isnumeric()),
+    ("É alfabético (só letras)", algo.isalpha()),
+    ("É alfanumérico (letras e/ou números)", algo.isalnum()),
+    ("Está em MAIÚSCULAS", algo.isupper()),
+    ("Está em minúsculas", algo.islower()),
+    ("Está em formato de título", algo.istitle())
+]
+
+for texto, resultado in verificacoes:
+    if resultado:
+        print(texto)
+    else:
+        print(f"Não: {texto.lower()}")
 
 input("\nAperte qualquer coisa para fechar...")
+
