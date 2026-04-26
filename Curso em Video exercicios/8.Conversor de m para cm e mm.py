@@ -1,10 +1,18 @@
 print("Escreva um programa que leia um valor em metros e o exiba convertido em centimetros e milimetros.\n")
 
-m = int(input("Digite o valor do seu metro: "))
-cm = m*100
-mm = m*1000
+while True:
+    try:
+        m = float(input("Digite o valor do seu metro: "))
+        break
+    except ValueError:
+        print("Valor inválido. Digite um número.")
 
-print(f"""{m} metros é igual a {cm} centimetros.
-{m} metros é igual a {mm} milimetros.""")
+M = int(m) if m.is_integer() else m
+
+cm = M * 100
+mm = M * 1000
+
+print(f"""{M} metros é igual a {cm} centimetros.
+{M} metros é igual a {mm} milimetros.""")
 
 input("\nAperte qualquer coisa para fechar...")

@@ -2,11 +2,7 @@ print("Crie um programa que leia um número inteiro e mostre na tela se ele é P
 
 while True:
     try:
-        n1 = float(input("Digite um Número inteiro: "))
-        if not n1.is_integer():
-            print("Não digite números decimais.")
-            continue
-        n1 = int(n1)
+        n1 = int(input("Digite um Número inteiro: "))
         break
     except ValueError:
         print("Número inválido.")

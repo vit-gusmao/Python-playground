@@ -2,11 +2,7 @@ print("Faça um programa que leia um ano qualquer e mostre se ele é Bissexto")
 
 while True:
     try:
-        ano = float(input("Digite um ano qualquer: "))
-        if not ano.is_integer():
-            print("Digite apenas números inteiros para o ano.")
-            continue
-        ano = int(ano)
+        ano = int(input("Digite um ano qualquer: "))
         break
     except ValueError:
         print("Valor inválido. Tente novamente.")

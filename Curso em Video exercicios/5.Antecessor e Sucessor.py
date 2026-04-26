@@ -1,15 +1,16 @@
 print("Faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor.\n")
 
-def suc_ant():
-    while True:
+while True:
         try:
-            num = float(input("digite um número: "))
-            suc = num + 1
-            ant = num - 1
-            return num, ant, suc
+            n = float(input("digite um número: "))
+            break
         except ValueError:
             print("Digite somente números.")
-num, ant, suc = suc_ant()
+
+num = int(n) if n.is_integer() else n
+
+suc = num + 1
+ant = num - 1
 
 print(f"o antecessor do número {num} é {ant} e o sucessor é {suc}")
 

@@ -18,11 +18,11 @@ while True:
     try:
         n1 = float(input("Digite uma nota: "))
         n2 = float(input("Digite outra nota: "))
-        media = (n1 + n2) / 2
         break
     except ValueError:    
         print("Digite somente números.")
 
+media = (n1 + n2) / 2
 
 if media < 5:
 
@@ -35,10 +35,9 @@ elif media <= 6.9:
 else:
     status = "aprovado"
 
-media_formatada = int(media) if n1.is_integer() and n2.is_integer() else media
+mediaf = int(media) if n1.is_integer() and n2.is_integer() else media
 
-# Print final
-print(f"""A média das notas do aluno {nome} é {media_formatada}.
+print(f"""A média das notas do aluno {nome} é {mediaf}.
 {nome} está {status}.""")
 
 input("\nAperte qualquer coisa para fechar...")

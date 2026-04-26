@@ -5,9 +5,6 @@ print("Crie um programa que leia um número real qualquer pelo teclado e mostre 
 while True:
     try:
         num = float(input("Digite um número decimal: "))
-        while num.is_integer():
-            print("número inválido.")
-            num = float(input("Digite um número decimal: "))
         break
     except ValueError:
             print("Digite somente números decimais.")

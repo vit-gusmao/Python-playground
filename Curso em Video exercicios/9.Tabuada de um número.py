@@ -2,9 +2,7 @@ print("Faça um programa que leia um número inteiro qualquer e mostre na tela a
 
 while True:
         try:
-            num = float(input("Digite um número inteiro para mostrar a tabuada: "))
-            while not num.is_integer():
-                print("Valor inválido.")
+            num = int(input("Digite um número inteiro para mostrar a tabuada: "))
             break
         except ValueError:
             print(f'Valor Inválido.')          

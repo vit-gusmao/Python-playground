@@ -20,43 +20,44 @@ mostrar_nome(nome_usuario)
 
 #############################################################################
 
-print('Função com retorno (return).\n')
+print('Função com listas, while, try/except e validação de número inválido.\n')
 
-def somar(a, b):
-    resultado = a + b
-    return resultado  # retorna o valor para fora da função
+num = []
 
-n1 = int(input("Digite um número: "))
-n2 = int(input("Digite outro número: "))
+while True:
+    try:
+        num = []
+        for i in range(2):
+            n = float(input(f"Digite o {i+1}º número: "))
+            num.append(n)
+        break  # saiu do loop se conseguiu ler corretamente os dois números
+    except ValueError:
+        print("Valor inválido! Digite números válidos.\n")
 
-soma = somar(n1, n2)
-print(f"A soma é: {soma}\n")
-
-#############################################################################
-
-print('Função com validação usando try/except.\n')
-
-def ler_numero(mensagem):
-    while True:
-        try:
-            numero = float(input(mensagem))
-            return numero  # retorna quando for válido
-        except ValueError:
-            print("Valor inválido! Digite um número válido.\n")
-
-# usando a função
-n1 = ler_numero("Digite um número: ")
-n2 = ler_numero("Digite outro número: ")
-
-print(f"A soma entre {n1} e {n2} é: {n1 + n2}\n")
+numf = [int(n) if n.is_integer() else n for n in num]
+print(f"Lista dos números digitados (formatados): {numf}")
+print(f"A soma entre {numf[0]} e {numf[1]} é: {numf[0] + numf[1]}\n")
 
 #############################################################################
 
-print('Função pode ser chamada várias vezes.\n')
+print('Função pode ser usada para múltiplos números também.\n')
 
-for i in range(3):
-    num = ler_numero(f"Digite o {i+1}º número: ")
-    print(f"Você digitou: {num}\n")
+num = []
+while True:
+    try:
+        num = []
+        for i in range(3):
+            n = float(input(f"Digite o {i+1}º número: "))
+            num.append(n)
+        break
+    except ValueError:
+        print("Valor inválido! Digite números válidos.\n")
+
+numf = [int(n) if n.is_integer() else n for n in num]
+print(f"Lista dos números digitados (formatados): {numf}")
+
+for i, n in enumerate(numf):
+    print(f"Você digitou [{i+1}]: {n}")
 
 #############################################################################
 

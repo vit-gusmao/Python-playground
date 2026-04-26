@@ -1,19 +1,18 @@
 print("Crie um script Python que leia dois números e tente mostrar a soma entre eles.\n")
 
-def ler_num():
-    while True:
-        try:
-            n1 = float(input("Digite o primeiro número: "))
-            n2 = float(input("Digite o segundo número: "))
-            soma = n1 + n2
+while True:
+    num = []
+    try:
+        for i in range(2):
+            n = float(input(f"Digite o {i + 1}° número: "))
+            num.append(n)
+        break        
+    except ValueError:
+        print("Digite somente números.")
 
-            return n1, n2, soma
+numf = [int(n) if n.is_integer() else n for n in num]
+soma = numf[0] + numf[1]
 
-        except ValueError:
-            print("Digite somente números.")
-
-n1, n2, soma = ler_num()
-
-print(f"A soma entre {n1} e {n2} é: {soma}")
+print(f"A soma entre {numf[0]} + {numf[1]} = {soma} ")
 
 input("\nAperte qualquer coisa para fechar...")

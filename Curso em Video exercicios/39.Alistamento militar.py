@@ -5,7 +5,13 @@ print("""Faça um programa que leia o ano de nascimento de um jovem e informe, d
 
 Seu Programa também deverá mostrar o tempo que falta ou que passou do prazo.\n""")
 
-year = int(input("Digite o ano de nascimento: "))
+while True:
+    try:
+        year = int(input("Digite o ano de nascimento: "))
+        break
+    except ValueError:
+        print("Opção inválida. Digite um ano válido.")
+
 idd = 2025 - year
 iddA = 18 - idd
 

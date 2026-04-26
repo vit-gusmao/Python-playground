@@ -17,15 +17,15 @@ while True:
     except ValueError:
         print("Opção inválida. Digite a idade como número inteiro.")
 
-if idd <= 9:
-    print(f"Categoria do atleta {nome}: MIRIM")
-elif idd <= 14:
-    print(f"Categoria do atleta {nome}: INFANTIL")
-elif idd <= 19:
-    print(f"Categoria do atleta {nome}: JUNIOR")
-elif idd <= 20:
-    print(f"Categoria do atleta {nome}: SÊNIOR")
-else:
-    print(f"Categoria do atleta {nome}: MASTER")
+verify = [
+    ("MIRIM", idd <= 9)
+    ("INFANTIL", idd <= 14)
+    ("JUNIOR", idd <= 19)
+    ("SÊNIOR", idd <= 20)
+    ("MASTER", idd > 20)
+]
 
-input("\nAperte qualquer coisa para fechar...") 
+for status, condition in verify:
+    print(f"O Atleta {nome} possui {idd} e está na categoria {status}")
+
+input("\nAperte qualquer coisa para fechar...")
