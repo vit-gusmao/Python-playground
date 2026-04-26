@@ -1,18 +1,21 @@
-# "for" é usado para repetir um número específico de vezes.
+#"for" é usado para repetir um número específico de vezes.
 
 print('"for in range" repete uma quantidade definida de vezes.\n')
 
-for i in range(5):
+x = int(input("Digite um número para mostrar ele do começo até o final: "))
+for i in range(x + 1): #o + 1 adiciona um espaço a mais no final, pois o range começa no 0.
     print(f"Repetição: {i}")
-
-print("Fim do loop for.\n")
+print()
+x = int(input("Digite um número para mostrar ele do 1 até o final: "))
+for i in range(x): 
+    print(f"Repetição: {i + 1}") #o + 1 pula um espaço, fazendo o range que começava no 0, começar no 1.
 
 #############################################################################
 
-print('"for" com início, fim e passo.\n')
+print('\n"for" com início, fim e passo.\n')
 
 for i in range(1, 11, 2):
-    print(f"Número: {i}")
+    print(f"Número: {i + 1}")
 
 print("Fim do loop com passo.\n")
 
@@ -40,4 +43,4 @@ print("Fim do for com índice.\n")
 
 #############################################################################
 
-input("Aperte qualquer coisa para fechar...")
+input("\nAperte qualquer coisa para fechar...")

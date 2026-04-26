@@ -1,18 +1,16 @@
 import math
 
-import math
-
 print("'math.sqrt(var)' = raiz quadrada.\n")
 num = int(input("Digite um número: "))
 print(f"A raiz quadrada de {num} é {math.sqrt(num)}\n")
 
 
-print("'math.ceil(var)' arredonda para cima.\n'math.floor(var)' arredonda para baixo.\n")
+print("'math.ceil(var)' arredonda o float para cima.\n'math.floor(var)' arredonda o float para baixo.\n")
 num = float(input("Digite um número decimal: "))
 print(f"{num} -> ceil: {math.ceil(num)} | floor: {math.floor(num)}\n")
 
 
-print("'math.trunc(var)' remove a parte decimal.\n")
+print("'math.trunc(var)' remove a parte decimal do float.\n")
 num = float(input("Digite um número decimal: "))
 print(f"{num} truncado fica {math.trunc(num)}\n")
 

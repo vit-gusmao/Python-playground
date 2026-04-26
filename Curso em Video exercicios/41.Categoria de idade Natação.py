@@ -5,8 +5,17 @@ print("""A confederação Nacional de Natação precisa de um programa que leia 
 - Até 20 anos: SÊNIOR
 - Acima: MASTER\n""")
 
-nome = input("Digite o nome do atleta: ")
-idd = int(input("Digite a idade do atleta: "))
+while True:
+    try:
+        nome = input("Digite o nome do atleta: ").strip().title()
+        while not nome.replace(" ", "").isalpha():
+            print("Nomes possuem somente letras.")
+            nome = input("Digite o nome do atleta: ").strip().title()
+        
+        idd = int(input("Digite a idade do atleta: "))
+        break
+    except ValueError:
+        print("Opção inválida. Digite a idade como número inteiro.")
 
 if idd <= 9:
     print(f"Categoria do atleta {nome}: MIRIM")
@@ -19,4 +28,4 @@ elif idd <= 20:
 else:
     print(f"Categoria do atleta {nome}: MASTER")
 
-input("\nAperte qualquer coisa para fechar...")
+input("\nAperte qualquer coisa para fechar...") 

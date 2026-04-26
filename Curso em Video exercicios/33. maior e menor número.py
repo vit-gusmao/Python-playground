@@ -1,21 +1,19 @@
 print("Faça um programa que leia três números e mostre qual é o maior e qual é o menor número.")
 
-n1 = float(input("Digite o primeiro número: "))
-n2 = float(input("Digite o segundo número: "))
-n3 = float(input("Digite o terceiro número: "))
+nums = []
+while True:
+    try:
+        for i in range(3):
+            n = float(input(f"Digite o {i + 1}° número: "))
+            nums.append(n)
+        break
+    except ValueError:
+        print("Digite apenas números.")
+        
+maior = max(nums)
+menor = min(nums)
 
-if n1 > n2 and n1 > n3:
-    print(f"o maior valor digitado é {n1}")
-elif n2 > n1 and n2 > n3:
-    print(f"o maior valor digitado é {n2}")
-else:
-    print(f"o maior valor digitado é {n3}")
-
-if n1 < n2 and n1 < n3:
-    print(f"o menor valor digitado é {n1}")
-elif n2 < n1 and n2 < n3:
-    print(f"o menor valor digitado é {n2}")
-else:
-    print(f"o menor valor digitado é {n3}")
+print(f"o maior valor digitado é: {maior}")
+print(f"o menor valor digitado é: {menor}")
 
 input("\nAperte qualquer tecla para fechar...")

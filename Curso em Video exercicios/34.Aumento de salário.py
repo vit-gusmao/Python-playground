@@ -3,7 +3,14 @@ Para salários superiores a R$1.250,00, calcule um aumento de 10%
 Para os inferiores ou iguais, o aumento é de 15%.\n''')
 
 print("Se seu salário for superior a R$1250,00 você receberá um aumento de 10%, se for inferior, receberá um aumento de 15%")
-sal = float(input("Digite o seu salário atual:R$ "))
+
+while True:
+    try:
+        sal = float(input("Digite o seu salário atual:R$ "))
+        break
+    except ValueError:
+        print("Valor inválido. Por favor, digite um número válido para o salário.")
+
 aum10 = sal * 0.10 + sal
 aum15 = sal * 0.15 + sal
 

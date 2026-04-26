@@ -3,7 +3,7 @@
 
 print("Pesquisa e contagem")
 
-print('"len(string)" é usado para saber quantas letras possui uma string.')
+print('"len(string)" é usado para saber quantos espaços possui uma string.')
 algo = input("Digite algo: ")
 print(f' Você digitou "{algo}", possui {len(algo)} caracteres.\n')
 

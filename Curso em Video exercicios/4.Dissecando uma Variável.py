@@ -16,9 +16,9 @@ for nome, tipo in tipos:
     else:
         print(f"Não é uma {nome}")
 
-print()  # linha em branco
+print()  
 
-# Métodos de string
+
 verificacoes = [
     ("É numérico", algo.isnumeric()),
     ("É alfabético (só letras)", algo.isalpha()),

@@ -29,6 +29,33 @@ try:
 except ZeroDivisionError:
     print("Erro! Não é possível dividir por zero.\n")
 
+#############################################################################
+
+print('"TypeError" acontece quando o tipo da variável não permite uma operação.')
+try:
+    texto = "abc"
+    resultado = texto + 5  # não pode somar string com int
+except TypeError:
+    print("Erro! Não é possível somar string e inteiro.\n")
+
+#############################################################################
+
+print('"IndexError" acontece quando o índice não existe na lista.')
+try:
+    lista = [1, 2, 3]
+    print(lista[5])
+except IndexError:
+    print("Erro! Índice fora do alcance da lista.\n")
+
+#############################################################################
+
+print('"KeyError" acontece quando a chave não existe no dicionário.')
+try:
+    dicionario = {"nome": "João"}
+    print(dicionario["idade"])
+except KeyError:
+    print("Erro! Chave não encontrada no dicionário.\n")
+
 ##############################################################################
 print('"else" executa se NÃO der erro.')
 try:

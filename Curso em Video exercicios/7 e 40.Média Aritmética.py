@@ -8,18 +8,37 @@ Recuperação
 - Média 7.0 ou superior:
 Aprovado\n""")
 
-nome = input("Digite o nome do aluno: ")
-n1 = float(input("Digite uma nota: "))
-n2 = float(input("Digite outra nota: "))
-media = (n1 + n2) / 2
 
-if media < 5.0:
-    print(f"A média das notas do aluno {nome} é {media}. {nome} está reprovado.")
+nome = input("Digite o nome do aluno: ").strip()
+while not nome.replace(" ", "").isalpha():
+    print(f'Nomes possui somente letras.')
+    nome = input("Digite seu nome: ").strip()
 
-elif media >= 5.0 or media <= 6.9:
-    print(f"A média das notas do aluno {nome} é {media}. {nome} está em recuperação.")
+while True:
+    try:
+        n1 = float(input("Digite uma nota: "))
+        n2 = float(input("Digite outra nota: "))
+        media = (n1 + n2) / 2
+        break
+    except ValueError:    
+        print("Digite somente números.")
+
+
+if media < 5:
+
+    status = "reprovado"
+
+elif media <= 6.9:
+
+    status = "em recuperação"
 
 else:
-    print(f"A média das notas do aluno {nome} é {media}. {nome} está aprovado.")
+    status = "aprovado"
+
+media_formatada = int(media) if n1.is_integer() and n2.is_integer() else media
+
+# Print final
+print(f"""A média das notas do aluno {nome} é {media_formatada}.
+{nome} está {status}.""")
 
 input("\nAperte qualquer coisa para fechar...")

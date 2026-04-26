@@ -1,9 +1,15 @@
-print("Faça um algoritimo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.\n")
+print("Faça um algoritmo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.\n")
 
-sal = float(input("Digite o salário: "))
-aum = sal * 0,15
-aumSal = price + aum
+while True:
+    try:
+        sal = float(input("Digite o salário: "))
+        break
+    except ValueError:
+        print("Valor inválido.")
 
-print(f"seu produto com desconto será de R${descPrice:.2f}")
+aum = sal * 0.15
+aumSal = sal + aum
+
+print(f"O novo salário com aumento será de R${aumSal:.2f}")
 
 input("\nAperte qualquer coisa para fechar...")

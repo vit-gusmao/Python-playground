@@ -3,14 +3,24 @@ print("""Escreva um programa que leia dois números inteiros  e compare-os, most
 - O segundo valor é maior
 - Não existe valor maior, os dois são iguais\n""")
 
-n1 = int(input("Digite o primeiro número: "))
-n2 = int(input("Digite o segundo número: "))
+num = []
+while True:
+    try:
+        num = []
+        for i in range(2):
+            n = float(input(f"Digite o {i + 1}° número: "))
+            num.append(n)
+        break
+    except ValueError:
+        print("Digite somente números.")
 
-if n1 > n2:
-    print(f'O número "{n1}" é maior que "{n2}"')
-elif n1 < n2:
-    print(f'O número "{n1}" é menor que "{n2}"')
+numf = [int(n) if n.is_integer() else n for n in num]
+
+if numf[0] > numf[1]:
+    print(f'O número "{numf[0]}" é maior que "{numf[1]}"')
+elif numf[0] < numf[1]:
+    print(f'O número "{numf[1]}" é maior que "{numf[0]}"')
 else:
-    print(f'O número "{n1}" é igual "{n2}"')
+    print(f'O número "{numf[0]}" é igual a "{numf[1]}"')
 
 input("\n Aperte qualquer coisa para fechar...")

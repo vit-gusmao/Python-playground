@@ -1,4 +1,4 @@
-print("Faça um conversor de temperatura de Celsius para Farenheit.\n")
+print("Faça um conversor de temperatura de Celsius para Fahrenheit.\n")
 
 C = float(input("Digite a temperatura em Celsius: "))
 toF = (C * 1.8) + 32
