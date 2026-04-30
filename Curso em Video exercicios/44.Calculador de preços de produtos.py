@@ -7,7 +7,7 @@ print("""Elabore um programa que calcule o valor a ser pago por um produto, cons
 
 while True:
     try:
-        price = float(input("Digite o preço do produto:R$ "))
+        price = float(input("Digite o preço do produto:R$"))
         break
     except ValueError:
         print("Não digite letras e simbólos.")
@@ -15,10 +15,10 @@ while True:
 print()
 
 pag = [
-    "À vista dinheiro/cheque",
-    "À vista no cartão",
-    "Em até 2x no cartão",
-    "3x ou mais no cartão"
+    "À vista dinheiro/cheque: 10% de desconto",
+    "À vista no cartão: 5% de desconto",
+    "Em até 2x no cartão: preço normal",
+    "3x ou mais no cartão: 20% de juros"
 ]
 
 for i, option in enumerate(pag, start=1):
@@ -37,10 +37,10 @@ while True:
         print("Digite um número válido.")
 
 verify = [
-    (lambda p: p * 0.9),    
-    (lambda p: p * 0.95),   
-    (lambda p: p),          
-    (lambda p: p * 1.2)     
+    (lambda p: price - (price * 0.10)),    
+    (lambda p: price - (price * 0.05)),   
+    (lambda p: price),          
+    (lambda p: price + (price * 0.20))     
 ]
 
 final_price = verify[option - 1](price)
